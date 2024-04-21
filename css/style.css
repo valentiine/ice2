@@ -1,0 +1,101 @@
+/* Author: Valentine Sah
+   Date: February 23rd, 2024
+   File Name: style.css
+   Description: This CSS file styles a simple calculator UI. It includes styles for the calculator body,
+   display, keys, and specific button behaviors to enhance user interaction. */
+
+/* Sets the overall background color of the webpage to a light grey (honeydew color), providing a neutral backdrop. */
+body {
+  background-color:  #f2f2f2; /* Honeydew color */
+}
+
+/* Styles the calculator's outer wrapper with a solid border, rounded corners for a softer look,
+   and centered positioning on the page. Padding is applied for internal spacing. */
+.calculator {
+  border: 15px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  position: relative; /* Enables absolute positioning of child elements relative to this container */
+  padding: 20px; /* Padding around the content */
+  width: 300px; /* Fixed width for consistent sizing */
+  margin: 50px auto; /* Centered horizontally with top and bottom margin */
+  padding-right: 20px; /* Additional right padding to ensure content is well-spaced */
+}
+
+/* Styles the display area of the calculator where the input and results are shown,
+   using flexbox for center alignment of text and ensuring the text color contrasts against the background. */
+.calculator__display {
+  height: 50px; /* Fixed height for consistency */
+  background: #222; /* Dark background for high contrast */
+  color: white; /* White text for readability */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Vertically center the text */
+  justify-content: flex-end; /* Right-align the text */
+  padding: 0 10px; /* Padding on both sides */
+  overflow: hidden; /* Prevents overflow of content */
+  word-wrap: break-word; /* Ensures long words do not overflow */
+  border-radius: 3px; /* Softened corners */
+  font-family: 'Consolas', 'Courier New', monospace; /* Monospace font for equal character width */
+  width: calc(100% - 20px); /* Width adjusted for padding */
+}
+
+/* Arranges calculator keys in a grid layout, with equal spacing between them and a margin at the top. */
+.calculator__keys {
+  display: grid; /* Grid layout for the keys */
+  grid-template-columns: repeat(4, 1fr); /* Four columns of equal width */
+  gap: 10px; /* Spacing between keys */
+  margin-top: 20px; /* Top margin above the keys */
+}
+
+/* General button styling with a focus on accessibility, using a pointer cursor to indicate interactiveness
+   and a solid border for clear separation. */
+button {
+  height: 50px; /* Consistent height */
+  font-size: 2em; /* Larger font size for readability */
+  border: none; /* Removes default border */
+  background: #f2f2f2; /* Matches the body background for a cohesive look */
+  border-radius: 3px; /* Rounded corners */
+  cursor: pointer; /* Indicates that the button is clickable */
+  border: 2px solid black; /* Solid black border for definition */
+}
+
+/* Specific styling for the clear button, using a red background for visual indication of its functionality. */
+button.key--clear {
+  background: #e95f46; /* Red background */
+  color: white; /* White text for contrast */
+}
+
+/* Specific styling for operator buttons, using an orange background to differentiate them from number keys. */
+button.key--operator {
+  background: #f0ad4e; /* Orange background */
+  color: white; /* White text for contrast */
+}
+
+/* Styles the equal button to emphasize its importance and functionality, extending it to span two grid columns. */
+button#key--equal {
+  background: #5cb85c; /* Green background for a strong visual cue */
+  color: white; /* White text for contrast */
+  grid-column: span 2; /* Spans two columns for emphasis */
+}
+
+/* Provides a subtle interaction effect for buttons when they are clicked, mimicking a physical button press. */
+button:active {
+  transform: scale(0.98); /* Slightly reduces the button size to simulate a press */
+}
+
+/* Corrects the equal button's grid spanning to stretch across the entire row for a more intuitive layout. */
+button#key--equal {
+  background: #5cb85c; /* Green background for consistency */
+  color: white; /* Maintains text contrast */
+  grid-column: 1 / -1; /* Stretches across all columns */
+}
+
+.title-page {
+  font-size: 48px; /* Large font size for the title */
+  text-align: center; /* Center the title */
+  margin: 20px 0; /* Add some space above and below the title */
+  font-weight: bold; /* Make the font bold */
+}
+
+.error {
+    color: white; /* visible error message */
+}

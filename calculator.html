@@ -1,0 +1,71 @@
+<!-- Author: Valentine Sah
+     File Name: calculator.html
+     Date: February 23rd, 2024 -->
+	 
+<!DOCTYPE html>
+<!-- Defines the document type and version of HTML -->
+<html lang="en">
+<!-- The root element of the HTML document, set to English language -->
+
+<head>
+  <!-- Contains meta-information about the document -->
+  <meta charset="UTF-8">
+  <!-- Specifies the character encoding for the HTML document (UTF-8) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures proper rendering and touch zooming on mobile devices -->
+  <title>Simple Calculator</title>
+  <!-- The title of the document shown in the browser's title bar or tab -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Links to the external CSS file for styling -->
+</head>
+
+<body>
+  <!-- Title for the page -->
+  <div class="title-page">Val's Calculator</div>
+  <!-- Contains the content of the HTML document -->
+  <div class="calculator">
+    <!-- Main calculator container -->
+    <div class="calculator__display" id="display">0</div>
+    <!-- Display area where the input and result are shown, initialized with 0 -->
+    <div class="calculator__keys">
+      <!-- Container for all the calculator keys -->
+      <button data-action="paren-left">(</button>
+      <button data-action="paren-right">)</button>
+      <button class="key--clear" data-action="clear-all">C</button>
+      <!-- Clear button to reset the calculator -->
+      <button class="key--clear" data-action="clear-entry">CE</button>
+      <!-- Clear entry button to delete the last entry -->
+      <button data-action="percent">%</button>
+      <!-- Button for percentage calculation -->
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <!-- Number buttons -->
+      <button class="key--operator" data-action="multiply" data-operator="*">&times;</button>
+      <!-- Multiply operator -->
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <!-- Number buttons -->
+      <button class="key--operator" data-action="subtract" data-operator="-">-</button>
+      <!-- Subtract operator -->
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <!-- Number buttons -->
+      <button class="key--operator" data-action="add" data-operator="+">+</button>
+      <!-- Addition operator -->
+      <button data-number="0">0</button>
+      <!-- Zero -->
+      <button data-number=".">.</button>
+      <!-- Decimal point for floating point operations -->
+      <button class="key--operator" data-action="divide" data-operator="/">/</button>
+      <!-- Division operator -->
+      <button class="key--equal" data-action="calculate" id="key--equal">=</button>
+      <!-- Equals button to compute the expression -->
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <!-- Link to the external JavaScript file that contains the logic -->
+</body>
+</html>
